@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap");
+
+#fixed {
+  background-color: rgba(255, 255, 255, 0.249);
+  top: 0;
+  padding: 10px 0 10px 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  background: #000;
+}
+
+#items-about {
+  height: 70vh;
+}
+
+#about p {
+  text-align: justify;
+}
+
+#mie-ayam {
+  order: 3;
+}
+
+#mie-ayam-jamur {
+  order: 2;
+}
+
+#mie-ayam-bakso {
+  order: 1;
+}
+
+#mie-ayam-bakso-mercon {
+  order: 6;
+}
+
+#mie-ayam-pangsit {
+  order: 5;
+}
+
+#mie-ayam-ceker {
+  order: 4;
+}
+
+/* costum bootstrap */
+.btn-primary {
+  background-color: #3b82f6 !important;
+  border-color: #3b82f6 !important;
+}
+
+.bg-hitam {
+  background-color: #f1f5f9;
+}
+
+.bg-hitam-sedang {
+  background-color: #cbd5e1;
+}
+
+.bg-hitam-legam {
+  background-color: #1e293b;
+}
+
+.text-title {
+  font-size: 50px;
+}
+
+.right img {
+  height: auto;
+  width: 85%;
+}
+
+.mw-p {
+  max-width: 60%;
+}
+
+.mw-p-full {
+  max-width: 100%;
+}
+
+.text-black {
+  color: black;
+}
+
+.jarak {
+  gap: 200px;
+}
+
+#pembungkus-gallery img,
+#pembungkus-gallery iframe {
+  border-radius: 10px;
+}
+
+.font-spline {
+  font-family: "Spline Sans Mono", monospace;
+}
+
+#kategori {
+  display: flex;
+}
+
+.shadow-custom {
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.ungu {
+  color: #a855f7;
+}
+
+#pembatas-about {
+  border: dashed;
+  margin-top: 50px;
+  height: 0.5px;
+}
+
+/* responsifbe */
+@media screen and (max-width: 760px) {
+  /* hero */
+  #pembungkus-hero {
+    display: block !important;
+  }
+
+  #items-about {
+    height: auto;
+  }
+
+  #fixed {
+    padding: 10px;
+  }
+
+  #gallery {
+    height: auto;
+  }
+
+  .mw-p {
+    max-width: 100%;
+  }
+
+  .right {
+    text-align: center;
+  }
+
+  .right img {
+    width: 70%;
+  }
+
+  #pembungkus-gallery {
+    display: block !important;
+    justify-content: center;
+  }
+
+  #left-gallery,
+  #right-gallery {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  #left-gallery {
+    margin-bottom: 20px;
+  }
+
+  #right-gallery iframe {
+    height: 50vh;
+  }
+
+  #kategori {
+    display: block;
+    gap: 0;
+  }
+
+  #kategori div {
+    margin-top: 50px;
+  }
+}
