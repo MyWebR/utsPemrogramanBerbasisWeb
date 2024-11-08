@@ -17,7 +17,3 @@ git add .
 git commit -m "contribusi"
 git push origin main
 
-git add .
-git commit -m "contribusi"
-git push origin main
-
