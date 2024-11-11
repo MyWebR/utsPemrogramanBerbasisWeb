@@ -29,12 +29,3 @@ git push origin main
 git add .
 git commit -m "add note index"
 git push origin main
-
-git add .
-git commit -m "add note index"
-git push origin main
-
-git add .
-git commit -m "add note index"
-git push origin main
-
