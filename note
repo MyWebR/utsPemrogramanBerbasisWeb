@@ -3,3 +3,12 @@ TRTRTRT
 dit add.
 git commit -m "memperbaiki fitur"
 git push origin maingit
+
+git add.
+git commit -m "memperbaiki fitur"
+git push origin main
+
+
+git add .
+git commit -m "gegegeg"
+git push origin main
