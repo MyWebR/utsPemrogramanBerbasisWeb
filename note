@@ -8,6 +8,3 @@ git add.
 git commit -m "memperbaiki fitur"
 git push origin main
 
-
-git add .
-git cpmm
