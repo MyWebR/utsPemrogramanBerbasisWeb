@@ -54,17 +54,22 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a
-                  class="nav-link active"
+                  id="nav-text"
+                  class="nav-link active text-dark"
                   aria-current="page"
                   href="#carouselExampleIndicators"
                   >Home</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#article">Article</a>
+                <a id="nav-text" class="nav-link text-dark" href="#article"
+                  >Article</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#gallery">Gallery</a>
+                <a id="nav-text" class="nav-link text-dark" href="#gallery"
+                  >Gallery</a
+                >
               </li>
             </ul>
             <form class="d-flex" role="search">
@@ -75,9 +80,17 @@
                 aria-label="Search"
               />
               <button class="btn btn-outline-success" type="submit">
-                Search
+                <span id="nav-text" class="nav-link text-dark">Search</span>
               </button>
             </form>
+            <!-- button dark mode -->
+            <button id="darkMode" style="margin: 0; padding: 0; background-color: transparent;" style="margin-left: 10px">
+              <!-- <label class="switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label> -->
+              mode
+            </button>
           </div>
         </div>
         <!--  -->
@@ -141,7 +154,11 @@
         data-bs-target="#carouselExampleIndicators"
         data-bs-slide="prev"
       >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span
+          class="carousel-control-prev-icon"
+          aria-hidden="true"
+          style="background-color: black; border-radius: 100%; padding: em"
+        ></span>
         <span class="visually-hidden">Previous</span>
       </button>
       <button
@@ -150,7 +167,11 @@
         data-bs-target="#carouselExampleIndicators"
         data-bs-slide="next"
       >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span
+          class="carousel-control-next-icon"
+          aria-hidden="true"
+          style="background-color: black; border-radius: 100%; padding: em"
+        ></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
@@ -164,7 +185,7 @@
         <div class="left">
           <h1 class="text-primary text-title">Mie ayam</h1>
           <span>
-            <p class="text-justify" style="max-width: 80%">
+            <p class="text-hero text-justify text-dark" style="max-width: 80%">
               Mie ayam adalah hidangan populer yang terdiri dari mi kuning
               kenyal yang disajikan dengan potongan daging ayam yang dimasak
               dengan bumbu khusus
@@ -352,7 +373,7 @@
     </section>
 
     <!-- footer -->
-    <footer class="py-5 bg-hitam-legam text-white">
+    <footer class="py-5 bg-dark text-white">
       <div id="kategori" class="container jarak">
         <!-- identitas pemilik website -->
         <div>
@@ -426,5 +447,8 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+
+    <!-- my javascript -->
+    <script src="darkmode.js" type="text/javascript"></script>
   </body>
 </html>
