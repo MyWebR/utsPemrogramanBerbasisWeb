@@ -29,71 +29,90 @@
 
   <body class="font-spline">
     <!-- nav -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div id="fixed" class="container-fluid">
-        <div class="container d-flex jus">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <a class="navbar-brand" href="#">
-            <img
-              src="image/Logo_udinus1-removebg-preview.png"
-              alt=""
-              style="height: 30px"
+    <nav class="navbar navbar-expand-lg bg-light-nav fixed-top">
+      <div class="container d-flex justify-content-between">
+        <button
+          class="navbar-toggler bg-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img
+            src="image/Logo Udinus - Official 02.png"
+            alt=""
+            style="height: 30px"
+          />
+          <img
+            src="image/2022 Udinus - Logo Unggul.png"
+            alt=""
+            style="height: 30px"
+          />
+        </a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                id="nav-text"
+                class="nav-link active text-dark"
+                aria-current="page"
+                href="#carouselExampleIndicators"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a id="nav-text" class="nav-link text-dark" href="#article"
+                >Article</a
+              >
+            </li>
+            <li class="nav-item">
+              <a id="nav-text" class="nav-link text-dark" href="#gallery"
+                >Gallery</a
+              >
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2 text-black bg-white border-white"
+              type="search"
+              id="search"
+              placeholder="Search"
+              aria-label="Search"
             />
-          </a>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a
-                  id="nav-text"
-                  class="nav-link active text-dark"
-                  aria-current="page"
-                  href="#carouselExampleIndicators"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a id="nav-text" class="nav-link text-dark" href="#article"
-                  >Article</a
-                >
-              </li>
-              <li class="nav-item">
-                <a id="nav-text" class="nav-link text-dark" href="#gallery"
-                  >Gallery</a
-                >
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2 text-black"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                <span id="nav-text" class="nav-link text-dark">Search</span>
-              </button>
-            </form>
-            <!-- button dark mode -->
-            <button id="darkMode" style="margin: 0; padding: 0; background-color: transparent;" style="margin-left: 10px">
-              <!-- <label class="switch">
-                <input type="checkbox" />
-                <span class="slider"></span>
-              </label> -->
-              mode
+            <button
+              class="btn btn-outline-success"
+              type="submit"
+              style="height: 40px"
+            >
+              <span id="nav-text" class="nav-link text-dark">Search</span>
             </button>
-          </div>
+          </form>
+          <!-- button dark mode -->
+          <button
+            id="darkMode"
+            style="
+              margin: 0;
+              padding: 0;
+              background-color: transparent;
+              border: none;
+              margin-left: 10px;
+            "
+          >
+            <label class="switch">
+              <input
+                type="checkbox"
+                checked
+                onclick="document.getElementById('darkMode').click()"
+              />
+              <span class="slider"></span>
+            </label>
+          </button>
         </div>
-        <!--  -->
       </div>
     </nav>
 
@@ -405,7 +424,7 @@
         <div id="tautan-footer">
           <h2>Tautan</h2>
           <a
-            href="#hero"
+            href="#carouselExampleIndicators"
             class="m-0 text-decoration-none d-block text-white custom-hover"
             >Home</a
           >
@@ -417,9 +436,10 @@
           >
         </div>
       </div>
+
       <hr class="container mt-5" />
       <!-- icon and name -->
-      <div class="text-center">
+      <div class="container text-center">
         <span class="fs-3">
           <i class="bi bi-google"></i>
           <i class="bi bi-github"></i>
@@ -433,6 +453,10 @@
           </p>
         </span>
       </div>
+      <!-- time server "PERUMPMAAN" -->
+      <h6 style="color: rgb(75, 255, 30); text-align: center">
+        <span id="jam"></span>
+      </h6>
     </footer>
 
     <!-- Bootstrap JavaScript Libraries -->
@@ -447,6 +471,32 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+
+    <!-- js time -->
+    <script>
+      window.setTimeout("tampilWaktu()", 1000);
+      function tampilWaktu() {
+        var waktu = new Date();
+        var bulan = waktu.getMonth();
+
+        setTimeout("tampilWaktu()", 1000);
+        document.getElementById("jam").innerHTML =
+          "Time Server: " +
+          waktu.getFullYear() +
+          "/" +
+          bulan +
+          "/" +
+          waktu.getDate() +
+          " " +
+          "[" +
+          waktu.getHours() +
+          ":" +
+          waktu.getMinutes() +
+          ":" +
+          waktu.getSeconds() +
+          "]";
+      }
+    </script>
 
     <!-- my javascript -->
     <script src="darkmode.js" type="text/javascript"></script>

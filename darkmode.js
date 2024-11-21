@@ -10,6 +10,32 @@ document.getElementById("darkMode").onclick = function () {
   }
 
   // NAVIGASI
+  const nav = document.getElementsByClassName("navbar");
+  for (let i = 0; i < nav.length; i++) {
+    if (nav[i].classList.contains("bg-light-nav")) {
+      nav[i].classList.remove("bg-light-nav");
+      nav[i].classList.add("bg-black-nav");
+    } else {
+      nav[i].classList.add("bg-light-nav");
+      nav[i].classList.remove("bg-black-nav");
+    }
+  }
+
+  const from = document.getElementsByClassName("form-control");
+  for (let i = 0; i < from.length; i++) {
+    if (from[i].classList.contains("bg-white")) {
+      from[i].classList.remove("bg-white");
+      from[i].classList.add("bg-dark");
+      from[i].classList.remove("text-black");
+      from[i].classList.add("text-white");
+    } else {
+      from[i].classList.add("bg-white");
+      from[i].classList.remove("bg-dark");
+      from[i].classList.add("text-black");
+      from[i].classList.remove("text-white");
+    }
+  }
+
   const collection = document.getElementsByClassName("nav-link");
   for (let i = 0; i < collection.length; i++) {
     if (collection[i].classList.contains("text-dark")) {
@@ -22,7 +48,7 @@ document.getElementById("darkMode").onclick = function () {
   }
 
   // JUDUL WEBSITE
-  const TitWeb = document.getElementsByClassName("text-hero"); // Mengambil elemen dengan class 'left'
+  const TitWeb = document.getElementsByClassName("text-hero");
   for (let i = 0; i < TitWeb.length; i++) {
     if (TitWeb[i].classList.contains("text-dark")) {
       TitWeb[i].classList.remove("text-dark");
@@ -61,4 +87,6 @@ document.getElementById("darkMode").onclick = function () {
       card.classList.add("text-white");
     }
   });
+
+  // TIME
 };
