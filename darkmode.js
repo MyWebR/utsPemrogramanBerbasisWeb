@@ -59,14 +59,37 @@ document.getElementById("darkMode").onclick = function () {
     }
   }
 
+  const hoverBg = document.getElementsByClassName("shadow-custom");
+  for (let i = 0; i < hoverBg.length; i++) {
+    if (hoverBg[i].classList.contains("hover-shadow-custom-dark")) {
+      hoverBg[i].classList.remove("hover-shadow-custom-dark");
+      hoverBg[i].classList.add("hover-shadow-custom-light");
+    } else {
+      hoverBg[i].classList.remove("hover-shadow-custom-light");
+      hoverBg[i].classList.add("hover-shadow-custom-dark");
+    }
+  }
+
   // GALLERY
   const gallery = document.getElementById("gallery");
   if (gallery.classList.contains("bg-dark")) {
     gallery.classList.remove("bg-dark");
-    gallery.classList.add("bg-white");
+    gallery.classList.add("bg-hitam");
   } else {
-    gallery.classList.remove("bg-white");
+    gallery.classList.remove("bg-hitam");
     gallery.classList.add("bg-dark");
+  }
+
+  const textGallery = document.getElementsByClassName("text-gallery");
+
+  for (let i = 0; i < textGallery.length; i++) {
+    if (textGallery[i].classList.contains("text-dark")) {
+      textGallery[i].classList.remove("text-dark");
+      textGallery[i].classList.add("text-white");
+    } else {
+      textGallery[i].classList.remove("text-white");
+      textGallery[i].classList.add("text-dark");
+    }
   }
 
   // CARD GALLERY
@@ -87,16 +110,4 @@ document.getElementById("darkMode").onclick = function () {
       card.classList.add("text-white");
     }
   });
-
-  const textGallery = document.getElementsByClassName("text-gallery");
-
-  for (let i = 0; i < textGallery.length; i++) {
-    if (textGallery[i].classList.contains("text-dark")) {
-      textGallery[i].classList.remove("text-dark");
-      textGallery[i].classList.add("text-white");
-    } else {
-      textGallery[i].classList.remove("text-white");
-      textGallery[i].classList.add("text-dark");
-    }
-  }
 };
