@@ -81,7 +81,6 @@ document.getElementById("darkMode").onclick = function () {
   }
 
   const textGallery = document.getElementsByClassName("text-gallery");
-
   for (let i = 0; i < textGallery.length; i++) {
     if (textGallery[i].classList.contains("text-dark")) {
       textGallery[i].classList.remove("text-dark");
@@ -105,9 +104,19 @@ document.getElementById("darkMode").onclick = function () {
     } else {
       card.classList.remove("bg-white");
       card.classList.add("bg-card");
-
       card.classList.remove("text-dark");
       card.classList.add("text-white");
     }
   });
+
+  const titleCard = document.getElementsByClassName("title-card");
+  for (let i = 0; i < titleCard.length; i++) {
+    if (titleCard[i].classList.contains("border-black")) {
+      titleCard[i].classList.remove("border-black");
+      titleCard[i].classList.add("border-white");
+    } else {
+      titleCard[i].classList.remove("border-white");
+      titleCard[i].classList.add("border-black");
+    }
+  }
 };

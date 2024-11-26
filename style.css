@@ -125,7 +125,7 @@ input:checked + .slider:before {
 }
 
 .bg-card {
-  background: linear-gradient(to right, #444, #333);
+  background: linear-gradient(to right, #222125d6, #303136);
 }
 
 .right img {
@@ -169,6 +169,16 @@ input:checked + .slider:before {
 .hover-shadow-custom-light {
   transition: box-shadow 0.3s ease-in-out;
   border: none;
+}
+
+.border-black {
+  border-bottom: 3px dashed #1f2937;
+  width: max-content;
+}
+
+.border-white {
+  border-bottom: 3px dashed #f4f4f4;
+  width: max-content;
 }
 
 .hover-shadow-custom-light:hover {
