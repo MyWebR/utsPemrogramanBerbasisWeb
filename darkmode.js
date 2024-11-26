@@ -88,5 +88,15 @@ document.getElementById("darkMode").onclick = function () {
     }
   });
 
-  // TIME
+  const textGallery = document.getElementsByClassName("text-gallery");
+
+  for (let i = 0; i < textGallery.length; i++) {
+    if (textGallery[i].classList.contains("text-dark")) {
+      textGallery[i].classList.remove("text-dark");
+      textGallery[i].classList.add("text-white");
+    } else {
+      textGallery[i].classList.remove("text-white");
+      textGallery[i].classList.add("text-dark");
+    }
+  }
 };
